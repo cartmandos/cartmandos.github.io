@@ -1,0 +1,210 @@
+@font-face {
+  font-family: "Courgette";
+  src: url("../images/font/curgette-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../images/font/segoeui.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #cfcfcf;
+  font-family: "Courgette";
+  height: 100vh;
+  margin: 0;
+}
+
+nav {
+  background-color: #b3b3b3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav-list {
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+nav .nav-list {
+}
+
+.nav-item {
+  float: left;
+  font-size: 1.15rem;
+  align-self: flex-end;
+}
+
+.nav-item a {
+  display: block;
+
+  color: black;
+  text-align: center;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+.brackets-hover {
+  visibility: hidden;
+}
+
+nav .nav-item a:hover:not(.active) {
+  background-color: transparent;
+  font-weight: bold;
+  color: #3c3c3c;
+}
+
+nav .nav-item a:hover:not(.active) .brackets-hover {
+  visibility: visible;
+}
+
+footer .nav-item a:hover:not(.active) {
+  text-decoration: underline black 2px;
+  text-underline-offset: 4px;
+}
+
+nav .nav-item a.active {
+  background-color: transparent;
+}
+
+footer {
+  position: relative;
+  bottom: 0%;
+}
+
+.nav-footer .nav-list {
+  margin: auto;
+  width: fit-content;
+}
+
+.bottom-footer {
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  margin: auto;
+  text-align: center;
+  border-top: 1px solid black;
+  padding-top: 5px;
+}
+
+.main {
+  padding-top: 1.5em;
+}
+
+.card {
+  align-items: center;
+  background-color: #232320;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 50px;
+  padding: 50px;
+  color: white;
+  z-index: auto;
+}
+
+.card .links {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.page-wrapper {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-list {
+  list-style-type: none;
+  display: flex;
+  padding: 10%;
+  margin: 10%;
+}
+
+.profile-item {
+  padding: 0.8em;
+}
+
+.profile-image {
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+}
+.profile-container {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2),
+    5px 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.block-button {
+  display: block;
+  display: none;
+}
+
+iframe {
+  border: 0;
+}
+
+/* form */
+input:invalid {
+  border: 2px dashed red;
+}
+input:invalid:required {
+  background-image: linear-gradient(to right, pink, lightgreen);
+}
+input:valid {
+  border: 2px solid black;
+}
+/* :required {} */
+.icon {
+  width: 2rem;
+  height: 2rem;
+  fill: #232320;
+}
+
+.icon:hover {
+  fill: #3c3c3c;
+}
+
+h1 {
+  padding: 0.25em;
+  border-right: 0.12em solid transparent; /* The typwriter cursor */
+  letter-spacing: 0.17em;
+}
+.card:hover h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.12em solid transparent; /* The typwriter cursor */
+  letter-spacing: 0.17em; /* Adjust as needed */
+  animation: blink-caret 0.75s step-end 5;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /*box-shadow: 4px 4px 10px 10px black;*/
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="../index.html">Home</a></li>
+        <li class="nav-item"><a href="./about.html">About</a></li>
+        <li class="nav-item">
+          <a class="active" href="#"><strong>Contact</strong></a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <div id="contact" class="page">
+        <div class="container">
+          <div class="row-fluid">Contact me!</div>
+          <form action="https://formspree.io/f/xwkzlwej" method="post">
+            <label for="fname">First name:</label><br />
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="John"
+              required
+            /><br />
+            <label for="lname">Last name:</label><br />
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              placeholder="Doe"
+            /><br />
+            <label for="email">E-Mail:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="john.doe@mail.com"
+              required
+            /><br />
+            <label for="subject">Subject:</label><br />
+            <select id="subject" required>
+              <option value="" disabled selected>What is it about?</option>
+              <option value="Job Offering">Job Offering</option>
+              <option value="Just to chat">Just to chat</option>
+              <option value="other">other</option>
+            </select>
+
+            <br />
+            <label for="comment">Comments:</label><br />
+            <!-- character count feedback? textarea size -->
+            <textarea
+              id="comment"
+              name="comment"
+              rows="4"
+              cols="50"
+              maxlength="250"
+              placeholder="..."
+              required
+            ></textarea>
+            <br /><br />
+
+            <input type="submit" id="btn-submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div class="nav-footer">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="../index.html">Home</a></li>
+            <li class="nav-item"><a href="./about.html">About</a></li>
+            <li class="nav-item">
+              <a class="active" href="#"><strong>Contact</strong></a>
+            </li>
+          </ul>
+        </div>
+        <div id="coding-lang" class="bottom-footer"></div>
+      </div>
+    </footer>
+    <script src="../js/footer.js"></script>
+    <script src="../js/contact.js"></script>
+  </body>
+</html>

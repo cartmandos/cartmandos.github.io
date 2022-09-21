@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="../index.html">Home</a></li>
+        <li class="nav-item">
+          <a class="active" href="#"><strong>About</strong></a>
+        </li>
+        <li class="nav-item">
+          <a href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <div id="about" class="page">
+        <div class="container">
+          <div class="row-fluid">
+            <div>describe why you are interested in coding</div>
+            <div>your educational and career experiences</div>
+            <div>your personal interests</div>
+          </div>
+
+          <div class="map-container">
+            <h3>Where I'm from and where I've been</h3>
+            <iframe
+              id="map"
+              src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="400"
+              height="300"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div>
+              <button type="button" id="prev" class="" disabled>
+                Previous
+              </button>
+              <button type="button" id="next" class="">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div class="nav-footer">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="../index.html">Home</a></li>
+            <li class="nav-item">
+              <a class="active" href="#"><strong>About</strong></a>
+            </li>
+            <li class="nav-item">
+              <a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div id="coding-lang" class="bottom-footer"></div>
+      </div>
+    </footer>
+
+    <script src="../js/footer.js"></script>
+    <script src="../js/maps.js"></script>
+  </body>
+</html>
+
+<!--
+8. On the "About" page, create a section that includes the following information: describe why
+you are interested in coding, your educational and career experiences, and your personal
+interests. Please style and layout the page as you choose.
+
+9. Add another section below what you created in the previous step. In this section, write where
+you were born and the cities in which you have visited. There should be at least 3 cities in
+total. If you have visited two cities or less, complete the list with other cities you would like to
+visit.
+
+10. Add two buttons: "Previous" and "Next" below the map. Clicking the "Next" button should
+change the pointer to the next city listed on your about page (i.e., a city you have lived in or
+want to visit). When the first of the series of locations is selected, the "Previous" button should
+disappear or be disabled, and when the last location is selected, the "Next" button should be
+the one blocked. Otherwise, both buttons should be visible. We encourage you to implement
+this using only one iframe.
+
+To summarize the behaviour of points 9 and 10, please give a look to the animation
+provided inside the examples folder, under the filename maps_behavior.gif.
+-->
