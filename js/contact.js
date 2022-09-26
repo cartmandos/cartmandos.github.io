@@ -1,21 +1,25 @@
-// wasteful
-
-const submitButton = document.getElementById("btn-submit");
-submitButton.disabled = "true";
-
+const submitButton = document.getElementById("btn-submit-form");
 const requiredFields = document.querySelectorAll("[required]");
-for (let i = 0; i < requiredFields.length; i++) {
-  requiredFields[i].addEventListener("change", submitButtonState);
-}
-
-function isFormValid() {
-  for (let i = 0; i < requiredFields.length; i++) {
-    if (!requiredFields[i].checkValidity()) return false;
-  }
-  return true;
-}
+var isRadioChecked = false;
+var isFormValid = false;
 
 function submitButtonState() {
-  submitButton.disabled = isFormValid() ? "" : "true";
-  console.log(isFormValid());
+  if (this.type === "radio") {
+    isRadioChecked = this.checked;
+  } else {
+    if (this.checkValidity()) this.className += "--ok";
+    else this.className = "";
+  }
+  if (
+    document.querySelectorAll("[required]:not([type=radio],.--ok)").length ===
+      0 &&
+    isRadioChecked
+  ) {
+    submitButton.disabled = "";
+  } else submitButton.disabled = true;
+}
+
+submitButton.disabled = "true";
+for (let i = 0; i < requiredFields.length; i++) {
+  requiredFields[i].addEventListener("change", submitButtonState);
 }

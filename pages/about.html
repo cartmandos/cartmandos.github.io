@@ -4,49 +4,86 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
+    <title>Oren Damien Shomrai | ITC</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
     <link href="../css/style.css" rel="stylesheet" />
+
+    <!--<script type="application/javascript" src="browser-polyfill.js"></script> -->
   </head>
   <body>
-    <nav>
-      <ul class="nav-list">
-        <li class="nav-item"><a href="../index.html">Home</a></li>
-        <li class="nav-item">
-          <a class="active" href="#"><strong>About</strong></a>
-        </li>
-        <li class="nav-item">
-          <a href="./contact.html">Contact</a>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav item">
+            <svg
+              style="padding-top: 10px"
+              width="40px"
+              aria-hidden="true"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 512"
+            >
+              <path
+                d="M41.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 41.4 86.6zM288 416H576c17.7 0 32 14.3 32 32s-14.3 32-32 32H288c-17.7 0-32-14.3-32-32s14.3-32 32-32z"
+              />
+            </svg>
+          </li>
+          <li class="nav-item">
+            <a href="../index.html">
+              <span class="nav-menu-link"> Home </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="active" href="#">
+              <span class="nav-menu-link"> About </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./contact.html">
+              <span class="nav-menu-link"> Contact </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <section class="main">
-      <div id="about" class="page">
-        <div class="container">
-          <div class="row-fluid">
-            <div>describe why you are interested in coding</div>
-            <div>your educational and career experiences</div>
-            <div>your personal interests</div>
+      <div id="about" class="card-container">
+        <div class="card -flex-row">
+          <div class="card-about-item">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+           
           </div>
-
-          <div class="map-container">
-            <h3>Where I'm from and where I've been</h3>
-            <iframe
-              id="map"
-              src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              width="400"
-              height="300"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <div>
-              <button type="button" id="prev" class="" disabled>
-                Previous
-              </button>
-              <button type="button" id="next" class="">Next</button>
-            </div>
+          <div class="card-about-item">
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit
           </div>
+          <div class="card-about-item">
+            esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+      </div>
+      <div class="page-wraper">
+      <div class="map-container">
+        <h2>Where I'm from and where I've been</h2>
+        <iframe
+          class="map"
+          src=""
+          width="400"
+          height="300"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="map-buttons">
+          <button type="button" id="prev" class="map-button prev" disabled>
+            Previous
+          </button>
+          <button type="button" id="next" class="map-button next">Next</button>
         </div>
       </div>
     </section>
@@ -55,16 +92,18 @@
       <div class="footer">
         <div class="nav-footer">
           <ul class="nav-list">
-            <li class="nav-item"><a href="../index.html">Home</a></li>
             <li class="nav-item">
-              <a class="active" href="#"><strong>About</strong></a>
+              <a href="../index.html">Home</a>
             </li>
+            <li class="nav-item"><a class="active" href="#">About</a></li>
             <li class="nav-item">
               <a href="./contact.html">Contact</a>
             </li>
           </ul>
         </div>
-        <div id="coding-lang" class="bottom-footer"></div>
+        <div class="bottom-footer">
+          <span class="coding-langs"></span>
+        </div>
       </div>
     </footer>
 
