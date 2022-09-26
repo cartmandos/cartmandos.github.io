@@ -12,10 +12,9 @@
     <header>
       <nav>
         <ul class="nav-list">
-          <li class="nav item --logo">
+          <li class="nav-list__item --logo">
             <svg
-              style="padding-top: 10px"
-              width="40px"
+              id="logo"
               aria-hidden="true"
               focusable="false"
               xmlns="http://www.w3.org/2000/svg"
@@ -26,30 +25,28 @@
               />
             </svg>
           </li>
-          <li class="nav-item">
+          <li class="nav-list__item">
             <a href="../index.html">
-              <span class="nav-menu-link"> Home </span>
+              <span class="nav-list__item-title"> Home </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-list__item">
             <a href="./about.html">
-              <span class="nav-menu-link"> About </span>
+              <span class="nav-list__item-title"> About </span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="active" href="#">
-              <span class="nav-menu-link"> Contact </span>
+          <li class="nav-list__item">
+            <a class="--active" href="./contact.html">
+              <span class="nav-list__item-title"> Contact </span>
             </a>
           </li>
         </ul>
       </nav>
     </header>
-
     <section class="main">
-      <div class="card-container">
+      <div class="card-wrapper">
         <div class="card">
           <h2>Get in touch</h2>
-
           <form action="https://formspree.io/f/xwkzlwej" method="post">
             <fieldset>
               <div class="form__col">
@@ -137,7 +134,6 @@
                 <label class="form-item__label--required" for="message"
                   >Message</label
                 ><br />
-                <!-- character count feedback? textarea size -->
                 <textarea
                   id="message"
                   name="message"
@@ -150,7 +146,7 @@
               </div>
 
               <p class="field-err--required">
-                <span class="ast--red">* </span>Required fields
+                <span class="--warning-red">* </span>Required fields
               </p>
               <div class="form-item">
                 <input
@@ -158,6 +154,7 @@
                   type="submit"
                   id="btn-submit-form"
                   value="SUBMIT"
+                  disabled
                 />
               </div>
             </fieldset>
@@ -167,21 +164,21 @@
     </section>
 
     <footer>
-      <div class="footer">
-        <div class="nav-footer">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="../index.html">Home</a>
-            </li>
-            <li class="nav-item"><a href="./about.html">About</a></li>
-            <li class="nav-item">
-              <a class="active" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div class="bottom-footer">
-          <span class="coding-langs"></span>
-        </div>
+      <div class="footer-nav">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-list__item">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="footer-nav-list__item">
+            <a href="./about.html">About</a>
+          </li>
+          <li class="footer-nav-list__item">
+            <a class="--active" href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-bottom__code-langs"></span>
       </div>
     </footer>
     <script src="../js/footer.js"></script>

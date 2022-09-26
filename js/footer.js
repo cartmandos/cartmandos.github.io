@@ -1,6 +1,7 @@
 const CODING_LANGUAGES = ["HTML", "CSS", "JavaScript"];
 const FOOTER_CODE_LANGS_OPENNING_PHRASE =
   "This website has been created with: ";
+const FOOTER_ELEMENT_CLASS = ".footer-bottom__code-langs";
 
 const stringifyCodingLanguages = (langs) => {
   let sentence = "";
@@ -29,7 +30,7 @@ const stringifyCodingLanguagesRecursive = (langs) => {
 };
 
 const setCodingLangsFooter = (phrase) => {
-  const footerSentence = document.querySelector(".coding-langs");
+  const footerSentence = document.querySelector(FOOTER_ELEMENT_CLASS);
   footerSentence.innerHTML = `${FOOTER_CODE_LANGS_OPENNING_PHRASE}${phrase}`;
 };
 

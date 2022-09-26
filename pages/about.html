@@ -8,16 +8,14 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
     <link href="../css/style.css" rel="stylesheet" />
 
-    <!--<script type="application/javascript" src="browser-polyfill.js"></script> -->
   </head>
   <body>
     <header>
       <nav>
         <ul class="nav-list">
-          <li class="nav item">
+          <li class="nav-list__item --logo">
             <svg
-              style="padding-top: 10px"
-              width="40px"
+              id="logo"
               aria-hidden="true"
               focusable="false"
               xmlns="http://www.w3.org/2000/svg"
@@ -28,19 +26,19 @@
               />
             </svg>
           </li>
-          <li class="nav-item">
+          <li class="nav-list__item">
             <a href="../index.html">
-              <span class="nav-menu-link"> Home </span>
+              <span class="nav-list__item-title"> Home </span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="active" href="#">
-              <span class="nav-menu-link"> About </span>
+          <li class="nav-list__item">
+            <a class="--active" href="./about.html">
+              <span class="nav-list__item-title"> About </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-list__item">
             <a href="./contact.html">
-              <span class="nav-menu-link"> Contact </span>
+              <span class="nav-list__item-title"> Contact </span>
             </a>
           </li>
         </ul>
@@ -48,62 +46,59 @@
     </header>
 
     <section class="main">
-      <div id="about" class="card-container">
-        <div class="card -flex-row">
+      <div id="about" class="card-wrapper">
+        <div class="card --flex --row">
           <div class="card-about-item">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-           
-          </div>
-          <div class="card-about-item">
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit
-          </div>
-          <div class="card-about-item">
-            esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </div>
+            <h3>Why coding ?</h3>
+            Thriving on challenges and problem solving which calls for critical & analytical thinking.
+        </div>
+        <div class="card-about-item">
+            <h3>Education</h3>
+            Studied Computer Science at the Hebrew University of Jerusalem
+        </div>
+        <div class="card-about-item">
+           <h3>Experience</h3>
+           Developed open source projects on GitHub, such as BINGIE with over 100k users worldwide.
         </div>
       </div>
-      <div class="page-wraper">
-      <div class="map-container">
-        <h2>Where I'm from and where I've been</h2>
-        <iframe
-          class="map"
-          src=""
-          width="400"
-          height="300"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-        <div class="map-buttons">
-          <button type="button" id="prev" class="map-button prev" disabled>
-            Previous
-          </button>
-          <button type="button" id="next" class="map-button next">Next</button>
-        </div>
-      </div>
+</div>
+<div class="card-wrapper">
+  <div class="map-container">
+    <h2>Where I'm from and where I've been</h2>
+    <iframe
+      class="map"
+      src=""
+      width="400"
+      height="300"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <div class="map-buttons">
+      <button type="button" id="prev" class="map-button prev" disabled>
+        Previous
+      </button>
+      <button type="button" id="next" class="map-button next">Next</button>
+    </div>
+      
     </section>
 
     <footer>
-      <div class="footer">
-        <div class="nav-footer">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="../index.html">Home</a>
-            </li>
-            <li class="nav-item"><a class="active" href="#">About</a></li>
-            <li class="nav-item">
-              <a href="./contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div class="bottom-footer">
-          <span class="coding-langs"></span>
-        </div>
+      <div class="footer-nav">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-list__item">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="footer-nav-list__item">
+            <a class="--active" href="./about.html">About</a>
+          </li>
+          <li class="footer-nav-list__item">
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-bottom__code-langs"></span>
       </div>
     </footer>
 
@@ -111,24 +106,3 @@
     <script src="../js/maps.js"></script>
   </body>
 </html>
-
-<!--
-8. On the "About" page, create a section that includes the following information: describe why
-you are interested in coding, your educational and career experiences, and your personal
-interests. Please style and layout the page as you choose.
-
-9. Add another section below what you created in the previous step. In this section, write where
-you were born and the cities in which you have visited. There should be at least 3 cities in
-total. If you have visited two cities or less, complete the list with other cities you would like to
-visit.
-
-10. Add two buttons: "Previous" and "Next" below the map. Clicking the "Next" button should
-change the pointer to the next city listed on your about page (i.e., a city you have lived in or
-want to visit). When the first of the series of locations is selected, the "Previous" button should
-disappear or be disabled, and when the last location is selected, the "Next" button should be
-the one blocked. Otherwise, both buttons should be visible. We encourage you to implement
-this using only one iframe.
-
-To summarize the behaviour of points 9 and 10, please give a look to the animation
-provided inside the examples folder, under the filename maps_behavior.gif.
--->
