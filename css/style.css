@@ -2,6 +2,7 @@
   font-family: "Courgette";
   src: url("../images/font/curgette-regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Segoe UI";
   src: url("../images/font/segoeui.ttf") format("truetype");
@@ -12,6 +13,7 @@
   to {
     border-color: transparent;
   }
+
   50% {
     border-color: white;
   }
@@ -72,7 +74,6 @@ nav .nav-list {
   text-align: left;
   width: max-content;
   text-decoration: none;
-
   padding: 1.05em 0.6em;
   display: block;
   color: #232320;
@@ -98,6 +99,7 @@ nav .nav-list {
 .nav-list__item a:hover:not(.--active) .nav-list__item-title::before {
   visibility: visible;
 }
+
 .nav-list__item a.--active .nav-list__item-title::before,
 .nav-list__item a.--active .nav-list__item-title::after {
   visibility: visible;
@@ -108,7 +110,6 @@ nav .nav-list {
   font-weight: bold;
 }
 
-/*footer*/
 footer {
   position: relative;
   bottom: 0%;
@@ -180,7 +181,6 @@ footer {
   background-color: #ebebeb;
   border-radius: 10px;
   color: whitesmoke;
-
   transition: all 0.4s ease-in-out;
 }
 
@@ -329,6 +329,7 @@ textarea#message {
   background-color: #f77f7f;
   cursor: not-allowed;
 }
+
 #btn-submit-form:enabled {
   background-color: #97eb16;
   cursor: pointer;
