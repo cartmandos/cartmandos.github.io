@@ -48,6 +48,7 @@ iframe {
 
 .main {
   padding-top: 60px;
+  margin-bottom: 3vw;
 }
 
 nav {
@@ -66,6 +67,7 @@ nav .nav-list {
 }
 
 .nav-list__item.--logo {
+  margin-right: 2rem;
   padding-top: 10px;
   width: 40px;
 }
